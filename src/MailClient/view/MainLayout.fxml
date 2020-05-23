@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="emailTableView" layoutX="216.0" layoutY="68.0" prefHeight="207.0" prefWidth="779.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="68.0">
+         <columns>
+            <TableColumn fx:id="markStarredCol" maxWidth="148.0" minWidth="20.0" prefWidth="29.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="STAR" />
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="subjectCol" prefWidth="253.0" text="Subject" />
+            <TableColumn fx:id="markReadCol" maxWidth="148.0" minWidth="20.0" prefWidth="29.0" text="OO" />
+            <TableColumn fx:id="senderCol" prefWidth="255.0" text="Sender" />
+            <TableColumn fx:id="markAttachmentCol" maxWidth="148.0" minWidth="20.0" prefWidth="29.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PAPERCLIP" size="15" />
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="sizeCol" prefWidth="39.0" text="Size" />
+            <TableColumn fx:id="dateCol" prefWidth="173.0" text="Date" />
+         </columns></TableView>
+      <WebView fx:id="messageRenderer" layoutX="215.0" layoutY="405.0" prefHeight="263.0" prefWidth="779.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="405.0" />
+      <AnchorPane layoutY="-1.0" prefHeight="592.0" prefWidth="213.0" styleClass="leftPane" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <TreeView fx:id="emailFoldersTreeView" layoutX="6.0" layoutY="91.0" prefHeight="469.0" prefWidth="201.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="91.0" />
+            <JFXButton fx:id="NewMessage" buttonType="RAISED" ellipsisString="." layoutX="33.0" layoutY="25.0" onAction="#Button1Action" prefHeight="41.0" prefWidth="164.0" styleClass="btn1" text="New Message" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PAPER_PLANE" nodeOrientation="RIGHT_TO_LEFT" size="20" />
+               </graphic></JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="216.0" layoutY="275.0" prefHeight="112.0" prefWidth="779.0" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="275.0">
+         <children>
+            <Label fx:id="fromLabel" layoutX="14.0" layoutY="55.0" prefHeight="17.0" prefWidth="394.0" styleClass="lbl" text="From : " />
+            <Label fx:id="subjectLabel" layoutX="14.0" layoutY="84.0" prefHeight="17.0" prefWidth="394.0" styleClass="lbl" text="Subject : " />
+            <Label fx:id="dateLabel" layoutX="591.0" layoutY="84.0" prefHeight="17.0" prefWidth="186.0" styleClass="lbl" text="Date : " />
+            <AnchorPane layoutX="404.0" layoutY="6.0" prefHeight="33.0" prefWidth="361.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <JFXButton fx:id="reply" buttonType="RAISED" layoutX="6.0" mnemonicParsing="false" onAction="#replyAction" styleClass="btn2" text="Reply">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MAIL_REPLY" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="forward" buttonType="RAISED" layoutX="93.0" mnemonicParsing="false" onAction="#forwardAction" styleClass="midBtn" text="Forward">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MAIL_FORWARD" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="278.0" mnemonicParsing="false" onAction="#deleteAction" styleClass="btn2" text="Junk">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TRASH_ALT" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="191.0" mnemonicParsing="false" onAction="#changeReadAction" prefHeight="25.0" prefWidth="79.0" styleClass="midBtn" text="Archive">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARCHIVE" size="15" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="221.0" layoutY="678.0" prefHeight="25.0" prefWidth="779.0">
+         <children>
+            <Label fx:id="downAttachmentsLabel" layoutX="7.0" layoutY="6.0" prefHeight="17.0" prefWidth="186.0" styleClass="lbl" text="Downloading Attachments" />
+            <JFXProgressBar fx:id="downAttachmentsProgress" layoutX="178.0" layoutY="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="216.0" layoutY="11.0" prefHeight="60.0" prefWidth="779.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="11.0">
+         <children>
+            <AnchorPane layoutX="552.0" layoutY="8.0" prefHeight="41.0" prefWidth="213.0" styleClass="searchPane" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <JFXTextField layoutX="15.0" layoutY="-1.0" prefHeight="33.0" prefWidth="178.0" promptText="Search for mail" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="-1.0" />
+                  <FontAwesomeIconView glyphName="SEARCH" layoutX="195.0" layoutY="19.0" opacity="0.39" size="20" AnchorPane.bottomAnchor="11.564173698425293" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="4.071428298950195" AnchorPane.topAnchor="6.142857551574707" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="4.0" prefHeight="33.0" prefWidth="469.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeReadAction" prefHeight="25.0" prefWidth="141.0" styleClass="markReadBtn" text="Mark as read">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="EMAIL_OPEN" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="372.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeReadAction" styleClass="btn2" text="Junk">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TRASH_ALT" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="293.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeReadAction" prefHeight="25.0" prefWidth="79.0" styleClass="midBtn" text="Archive">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARCHIVE" size="15" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="downAttachmentBtn" buttonType="RAISED" layoutX="132.0" layoutY="7.0" mnemonicParsing="false" onAction="#downAttachBtnAction" prefHeight="25.0" prefWidth="172.0" styleClass="downBtn" text="Download Attachments">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="DOWNLOAD" size="15" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

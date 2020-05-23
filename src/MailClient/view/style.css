@@ -1,0 +1,82 @@
+AnchorPane{
+  -fx-padding: 0;
+  -fx-background-color: #596174;
+  -fx-background-repeat: repeat, no-repeat;
+  -fx-background-position: left top, left 19px top 15px ;
+}
+
+*{
+  -fx-border-radius: 0 0 0 0;
+  -fx-background-radius: 0 0 0 0;
+}
+
+.leftPane
+{
+  -fx-padding: 0;
+  -fx-background-color: #303A52;
+  -fx-background-repeat: repeat, no-repeat;
+  -fx-background-position: left top, left 19px top 15px ;
+  -fx-background-image: opacity 10px;
+}
+
+.btn1
+{
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5em;
+  -fx-min-width: 150px;
+  -fx-min-height: 50px;
+  -fx-max-width: 30px;
+  -fx-max-height: 50px;
+}
+
+.btn2
+{
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5em;
+  -fx-min-width: 100px;
+  -fx-max-width: 10px;
+  -fx-max-height: 30px;
+  -fx-min-height: 20px;
+}
+.markReadBtn
+{
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5em;
+  -fx-min-width: 130px;
+  -fx-max-width: 10px;
+  -fx-max-height: 30px;
+  -fx-min-height: 20px;
+}
+.midBtn
+{
+  -fx-background-color: #ffffff;
+  -fx-min-width: 100px;
+  -fx-max-width: 10px;
+  -fx-max-height: 30px;
+  -fx-min-height: 20px;
+}
+
+.lbl
+{
+  -fx-font-weight: bold;
+  -fx-text-fill: #ffffff;
+}
+
+.searchPane
+{
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 5em;
+  -fx-min-width: 230px;
+  -fx-max-width: 230px;
+  -fx-max-height: 50px;
+  -fx-min-height: 30px;
+}
+
+.downBtn
+{
+  -fx-background-color: #ffffff;
+  -fx-min-width: 170px;
+  -fx-max-width: 170px;
+  -fx-max-height: 30px;
+  -fx-min-height: 20px;
+}

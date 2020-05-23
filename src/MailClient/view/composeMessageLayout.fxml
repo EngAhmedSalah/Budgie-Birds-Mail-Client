@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label styleClass="lbl" layoutX="15.0" layoutY="35.0" text="From:" AnchorPane.leftAnchor="15.0" />
+      <Label styleClass="lbl" layoutX="14.0" layoutY="65.0" text="To:" AnchorPane.leftAnchor="15.0" />
+      <Label styleClass="lbl" layoutX="17.0" layoutY="102.0" text="Subject:" AnchorPane.leftAnchor="15.0" />
+      <JFXButton styleClass="btn2" layoutX="13.0" layoutY="149.0" mnemonicParsing="false" onAction="#attchBtnAction" text="Attach" />
+      <Label styleClass="lbl" fx:id="attachmentsLable" layoutX="75.0" layoutY="153.0" />
+      <ChoiceBox fx:id="senderChoice" layoutX="75.0" layoutY="31.0" prefHeight="25.0" prefWidth="555.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="11.0" />
+      <JFXTextField fx:id="recipientField" layoutX="75.0" layoutY="61.0" prefHeight="25.0" prefWidth="555.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="11.0" />
+      <JFXTextField fx:id="subjectField" layoutX="75.0" layoutY="98.0" prefHeight="25.0" prefWidth="555.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="11.0" />
+      <HTMLEditor fx:id="composeArea" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="182.0" prefHeight="492.0" prefWidth="618.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="182.0" />
+      <Label styleClass="lbl" fx:id="errorLabel" layoutX="16.0" layoutY="695.0" text="no error for now" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="16.0" />
+      <JFXButton layoutX="553.0" layoutY="691.0" mnemonicParsing="false" fx:id="sentBtn" onAction="#sendBtnAction"  styleClass="btn2" prefHeight="25.0" prefWidth="74.0" text="Send" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="14.0" />
+   </children>
+</AnchorPane>
