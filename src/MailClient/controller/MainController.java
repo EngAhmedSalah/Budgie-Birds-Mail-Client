@@ -37,8 +37,8 @@ public class MainController extends AbstractController implements Initializable
 	@FXML
 	private TreeView<String> emailFoldersTreeView;
 	private MenuItem showDetails = new MenuItem("show details");
-	private String username = "ahmed.salahfci1164@gmail.com";// change accordingly
-	private String password = "BudgiBirds1841998";// change accordingly
+	private String username = "your mail";// change accordingly
+	private String password = "your password";// change accordingly
 	private SaveAttachmentsService saveAttachmentsService;
 	private CreateAndRegisterEmailAccountService small;
 	@FXML
