@@ -4,7 +4,7 @@ Budgie Mail Client is a java mail client desktop app that can send and recieve m
 
 ## How to use it:
 * clone the repository and open it using any java IDE.
-* add libraries that attached in the repository to your java IDE.
+* add libraries (libs) that attached in the repository to your java IDE.
 * open controller/mainController and add your gmail email address and password.
 then run the app 
 
