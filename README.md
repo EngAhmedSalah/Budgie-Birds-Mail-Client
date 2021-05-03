@@ -8,4 +8,4 @@ Budgie Mail Client is a java mail client desktop app that can send and recieve m
 * open controller/mainController and add your gmail email address and password.
 then run the app 
 
-# Made with :heart: __    <a href = "https://www.facebook.com/ProgAhmedSalah98">Ahmed Salah</a>
+# Made with :heart: __    <a href = "https://www.facebook.com/SWEAhmedSalah/">Ahmed Salah</a>
